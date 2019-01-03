@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/maven_parten/dao_maven/dao_maven.iml" filepath="$PROJECT_DIR$/maven_parten/dao_maven/dao_maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_04/maven_04.iml" filepath="$PROJECT_DIR$/maven_04/maven_04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_parten/maven_parten.iml" filepath="$PROJECT_DIR$/maven_parten/maven_parten.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_parten02/maven_parten02.iml" filepath="$PROJECT_DIR$/maven_parten02/maven_parten02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_parten/service_maven/service_maven.iml" filepath="$PROJECT_DIR$/maven_parten/service_maven/service_maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_parten02/son_dao/son_dao.iml" filepath="$PROJECT_DIR$/maven_parten02/son_dao/son_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_parten02/son_service/son_service.iml" filepath="$PROJECT_DIR$/maven_parten02/son_service/son_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_parten02/son_web/son_web.iml" filepath="$PROJECT_DIR$/maven_parten02/son_web/son_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc01/springmvc01.iml" filepath="$PROJECT_DIR$/springmvc01/springmvc01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc02/springmvc02.iml" filepath="$PROJECT_DIR$/springmvc02/springmvc02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc03/springmvc03.iml" filepath="$PROJECT_DIR$/springmvc03/springmvc03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven_parten/web_maven/web_maven.iml" filepath="$PROJECT_DIR$/maven_parten/web_maven/web_maven.iml" />
+    </modules>
+  </component>
+</project>

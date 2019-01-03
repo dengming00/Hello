@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:18:28:43 +0800] "GET /web_maven HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:18:28:44 +0800] "GET /web_maven/ HTTP/1.1" 200 122 http-bio-8080-exec-2 1075
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:18:28:44 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:18:28:47 +0800] "GET /web_maven/user/findAll HTTP/1.1" 200 597 http-bio-8080-exec-5 773
