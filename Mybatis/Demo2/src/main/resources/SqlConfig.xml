@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="druid.properties"></properties>
+    <!-- 给全限定类起别名，当指定了别名，就不区分大小写-->
+    <typeAliases>
+        <!--方式一：-->
+        <!--<typeAlias type="com.deng.domain.User" alias="User"></typeAlias>-->
+        <!-- 方式二：给domain包下的所类取别名，就为其类名-->
+        <package name="com.deng.domain"></package>
+
+    </typeAliases>
+
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${db.driver}"/>
+                <property name="url" value="${db.url}"/>
+                <property name="username" value="${db.username}"/>
+                <property name="password" value="${db.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--resource为映射的配置文件的位置-->
+        <!--<mapper resource="com/deng/dao/UserDao.xml"/>-->
+
+        <!-- 有了这个就能找到所有的 映射的配置文件的位置，不需在写上面的了-->
+        <package name="com.deng.dao"></package>
+
+    </mappers>
+</configuration>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deng.dao.UserMapper1"><!-- namespace为映射的接口-->
+    <!--查找所有-->
+    <select id="finlAll" resultType="com.deng.domain.User"><!-- resultType返回的结果类型-->
+        select * from USER
+    </select>
+    <!--根据id查找一条-->
+    <select id="finlOne" parameterType="Integer" resultType="com.deng.domain.User">
+        SELECT * FROM USER WHERE id = #{id}
+    </select>
+    <!--添加数据-->
+    <insert id="add" parameterType="com.deng.domain.User">
+      INSERT INTO `USER` VALUES (#{id},#{username},#{password},#{sex})
+    </insert>
+    <!--根据id修改数据-->
+    <update id="update" parameterType="com.deng.domain.User">
+        UPDATE USER SET username=#{username},PASSWORD=#{password} WHERE id=${id}
+    </update>
+    <!--根据id删除数据-->
+    <delete id="delete" parameterType="Integer" >
+         DELETE FROM USER WHERE id=#{id}
+    </delete>
+    <!--模糊查询-->
+    <select id="likeSelect" parameterType="string" resultType="com.deng.domain.User">
+        SELECT * FROM USER where username LIKE '%${value}%' <!--${value}只能写value-->
+        <!--  SELECT * FROM USER where username LIKE concat('%',#{name},'%')-->
+    </select>
+    <!--获取用户总数据数-->
+    <select id="sum" resultType="Integer">
+        SELECT COUNT(*) FROM USER
+    </select>
+    <!--包装参数在param类中-->
+    <select id="selectParam" parameterType="com.deng.domain.Param" resultType="com.deng.domain.User">
+        select * from user where id = #{user.id}<!--当只有一个参数时#{}中可以乱写-->
+    </select>
+</mapper>

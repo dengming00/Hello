@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dengming.dao.UserDao">
+    <resultMap id="map" type="Account">
+        <id property="id" column="id"></id>
+        <result property="uid" column="uid"></result>
+        <result property="money" column="money"></result>
+       <association property="user" column="uid" javaType="User" select="com.dengming.dao.UserDao.finlUser">
+       </association>
+    </resultMap>
+   <!-- 查询账户-->
+    <select id="finlAccount" resultMap="map">
+        select * from account
+    </select>
+    <!--查询账户详细信息-->
+    <select id="finlUser" resultType="User">
+    select * from user where id=#{uid}
+</select>
+</mapper>

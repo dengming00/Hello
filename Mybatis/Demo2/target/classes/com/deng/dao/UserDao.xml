@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.deng.dao.UserDao">
+    <!--配置属性名 和 列名一致 方式二-->
+    <resultMap id="map" type="User">
+        <!--主键的配置-->
+        <id property="iD" column="id"></id>
+        <!--其他列名的配置-->
+        <result property="name" column="username"></result>
+        <result property="pass" column="password"></result>
+        <result property="male" column="sex"></result>
+    </resultMap>
+    <select id="finlAll" resultMap="map">
+    <!-- 给表的列起别名方式一 -->
+        <!--select id as iD ,username as name, password as pass,sex as male from USER-->
+        select * from USER
+    </select>
+    <!--添加数据并返回id 值-->
+    <insert id="insert" parameterType="user">
+        <selectKey keyProperty="iD" keyColumn="id" resultType="int" order="AFTER">
+            SELECT LAST_insert_id()
+        </selectKey>
+        insert into user(username,password,sex) VALUES (#{name},#{pass},#{male})
+    </insert>
+
+</mapper>
